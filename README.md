@@ -1,17 +1,32 @@
-# ratio_calc_app_6
+概要
+標準的な計算機アプリでは手間の掛かる割引後の価格計算を、専用ボタンによるワンタップで完結させることを目的として開発しました。家計管理における「いかに安く買えるか」というニーズに対し、既存の計算機にはない利便性を提供します。
 
-A new Flutter project.
+主な機能
+数値入力による標準的な四則演算
 
-## Getting Started
+10% / 20% / 30% / 50% の割引価格を一括算出する専用ボタン
 
-This project is a starting point for a Flutter application.
+買い物中の片手操作を想定した、視認性の高いUIレイアウト
 
-A few resources to get you started if this is your first Flutter project:
+使用技術
+Framework: Flutter
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Language: Dart
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tool: Gemini (ロジックの生成、デバッグ、プロンプトによる設計相談)
+
+設計とリファクタリング
+本プロジェクトでは、開発初期の「1ファイルに全てのロジックを詰め込んだ状態」から、メンテナンス性を考慮したリファクタリングを実施しました。
+
+UIと計算ロジック（Business Logic）を別ファイルに分離
+
+役割ごとにクラスを分割し、将来的な機能追加（履歴保存等）が容易な構成へと改善
+
+開発プロセスにおけるAI活用
+開発の工程においてGeminiを活用しています。単にコードを生成させるだけでなく、「なぜその記述が必要なのか」を検証しながら進めることで、以下の経験を積んでいます。
+
+AIを用いた効率的なデバッグ作業
+
+プロンプトによる最適なフォルダ構成・ファイル分割の検討
+
+意図した動作を実現するためのロジックの微調整
